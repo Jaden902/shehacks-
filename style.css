@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    color: #00FF66;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+ 
+  h1 {
+    text-align: center;
+  }
+ 
+  button {
+    background-color: #00FF66;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+ 
+  button:hover {
+    background-color: #00CC52;
+  }
+ 
+  .main-menu {
+    text-align: center;
+  }
+ 
+  .tasks-container, .scores-container {
+    text-align: center;
+  }
+ 
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+ 
+  li {
+    background-color: #00FF66;
+    color: black;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+ 
+  li.completed {
+    text-decoration: line-through;
+  }
+ 
+  .progress-bar {
+    width: 80%;
+    background: #444;
+    height: 20px;
+    margin: 20px auto;
+    position: relative;
+  }
+ 
+  .progress-bar #progress {
+    height: 100%;
+    background: #00FF66;
+    width: 0;
+  }
+ 

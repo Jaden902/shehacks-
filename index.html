@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Bound: Reach for the Stars</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List: Space Exploration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="main-menu">
-    <div class="header">
-      <p>PLAYER 1 ❤️</p>
+    <!-- Mission Section -->
+    <div class="mission-section">
+        <h1>Our mission is to empower women to rise and lead in the tech world by reaching for the stars literally!</h1>
     </div>
-    <div class="container">
-      <h1>SPACE BOUND: REACH FOR THE STARS</h1>
-      <button onclick="location.href='tasks.html'">VIEW TASKS</button>
-      <button onclick="location.href='scores.html'">VIEW SCORES</button>
+
+    <div class="main-container">
+        <div class="category-container">
+            <h3>Categories</h3>
+            <button onclick="showTasks('techExploration')">Tech Exploration📟</button>
+            <button onclick="showTasks('aiSpace')">AI in Space🔭</button>
+            <button onclick="showTasks('womenInSTEM')">Women in STEM👩‍💻</button>
+            <button onclick="showTasks('cyberSecurity')">Cybersecurity🧱</button>
+            <button onclick="showTasks('machineLearning')">Machine Learning📲</button>
+        </div>
+
+        <div class="todo-container">
+            <h1>Space Mission To-Do List</h1>
+            <div class="search-banner">
+                <input type="text" id="searchInput" placeholder="Add a new task...">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <ul id="taskList"><!-- Tasks will be added here --></ul>
+        </div>
     </div>
-    <div class="footer">
-      <img class="character" src="character.png" alt="Character">
-      <img class="cat" src="cat.png" alt="Cat">
+      
+    <!-- Instruction Section -->
+    <div id="taskInstructions">
+        <div id="instructionsContent">
+            <!-- Instruction content will be inserted here -->
+        </div>
     </div>
-  </div>
+
+    <div class="bottom-image-container">
+        <img src="images/spaceinvaders1.png" width="500px" alt="Arcade Inspired" class="Space invader">
+    </div>
+
+    <script src="script.js"></script>
+    <script src="tasks.js"></script>
 </body>
 </html>

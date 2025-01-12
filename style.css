@@ -1,69 +1,144 @@
-body {
+/* Basic Reset */
+* {
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
-    background-color: black;
-    color: #00FF66;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
- 
-  h1 {
-    text-align: center;
-  }
- 
-  button {
-    background-color: #00FF66;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    font-size: 16px;
-  }
- 
-  button:hover {
-    background-color: #00CC52;
-  }
- 
-  .main-menu {
-    text-align: center;
-  }
- 
-  .tasks-container, .scores-container {
-    text-align: center;
-  }
- 
-  ul {
-    list-style: none;
     padding: 0;
-  }
- 
-  li {
-    background-color: #00FF66;
-    color: black;
-    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Irish Grover', sans-serif; /* Arcade font */
+    background-color: #001D37; /* Dark space background */
+    color: #FB61D6; /* Neon pink text */
+    text-align: center;
+}
+
+/* Main container */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Category section */
+.category-container {
+    width: 25%;
+    background-color: #1CF285; /* Neon green background */
     padding: 10px;
+    border-radius: 10px;
+}
+
+.category-container h3 {
+    font-size: 2rem;
+    color: #FB61D6; /* Neon pink */
+    text-shadow: 2px 2px 5px #8682EB; /* Neon glow effect */
+}
+
+.category-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #FB61D6;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
     cursor: pointer;
-  }
- 
-  li.completed {
-    text-decoration: line-through;
-  }
- 
-  .progress-bar {
+    transition: 0.3s;
+}
+
+.category-container button:hover {
+    background-color: #8682EB; /* Hover with a purple glow */
+    box-shadow: 0 0 10px 5px #FB61D6;
+}
+
+/* Our Mission Section */
+.mission-section {
+    background-color: #001D37; /* Dark background for contrast */
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;  /* Space between mission statement and to-do list */
+    border-radius: 10px;
+}
+
+.mission-section h1 {
+    font-size: 2.5rem; /* Matching font size for consistency */
+    color: #FB61D6;  /* Neon pink text */
+    text-shadow: 3px 3px 5px #1CF285; /* Neon glow effect */
+    margin-bottom: 30px; /* Added space after the heading */
+}
+
+/* To-Do Section */
+.todo-container {
+    width: 70%;
+    background-color: #002B3D; /* Dark background for task list */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.todo-container h1 {
+    font-size: 3rem;
+    color: #FB61D6;
+    text-shadow: 3px 3px 5px #1CF285; /* Neon glow effect */
+}
+
+.search-banner input {
+    padding: 10px;
     width: 80%;
-    background: #444;
-    height: 20px;
-    margin: 20px auto;
-    position: relative;
-  }
- 
-  .progress-bar #progress {
-    height: 100%;
-    background: #00FF66;
-    width: 0;
-  }
- 
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #FB61D6;
+    background-color: #003E56; /* Dark blue background */
+    color: white;
+}
+
+.search-banner button {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: #FB61D6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.search-banner button:hover {
+    background-color: #8682EB;
+    box-shadow: 0 0 10px 5px #FB61D6;
+}
+
+/* Task List */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#taskList li {
+    background-color: #1CF285;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskList li button {
+    background-color: #8682EB;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+#taskList li button:hover {
+    background-color: #FB61D6;
+    box-shadow: 0 0 10px 5px #8682EB;
+}
+
+/* Task Instructions Section */

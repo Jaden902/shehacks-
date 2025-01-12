@@ -1,8 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const progress = localStorage.getItem('progress') || 0;
-    const progressBar = document.getElementById('progress');
-    const progressText = document.getElementById('progress-text');
- 
-    progressBar.style.width = `${progress}%`;
-    progressText.textContent = `${Math.floor(progress)}% to the goal`;
-  });
+// Function to calculate the percentage of completed tasks
+function calculateProgress(totalTasks, completedTasks) {
+    return totalTasks === 0 ? 0 : (completedTasks / totalTasks) * 100;
+}
+
+// Function to update the displayed progress
+function updateProgressDisplay(progressPercentage) {
+    let progressText = document.getElementById("progressText");
+    
+    if (!progressText) {
+        progressText = document.createElement("div");
+        progressText.id = "progressText";
+        document.body.appendChild(progressText);  // You can append it anywhere in the body
+    }
+
+    progressText.textContent = `Goal completion: ${progressPercentage.toFixed(2)}%`;
+}
